@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Basic styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+header h1 a {
+    color: #212529;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Post list */
+.posts .post {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.posts .post:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.posts .post-title a {
+    color: #343a40;
+    text-decoration: none;
+    font-size: 1.75rem;
+}
+
+.posts .post-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.posts .post-excerpt {
+    margin-top: 10px;
+}
+
+
+/* Footer */
+footer {
+    border-top: 1px solid #dee2e6;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
