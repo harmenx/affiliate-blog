@@ -4,9 +4,21 @@ layout: default
 
 <article class="post">
   <h2>{{ page.title }}</h2>
-  <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
+  <p class="post-meta">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+
+  {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.product_name }}" style="max-width: 100%; height: auto;">
+  {% endif %}
+
+  {% if page.rating %}
+    <p><strong>Rating:</strong> {{ page.rating }}</p>
+  {% endif %}
 
   <div class="post-content">
-    {{ content }}
+    {{ content | markdownify }}
   </div>
+
+  {% if page.affiliate_link %}
+    <p><a href="{{ page.affiliate_link }}" target="_blank" class="button">Buy Now on Amazon</a></p>
+  {% endif %}
 </article>
