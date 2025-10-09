@@ -11,11 +11,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./ # optional
-          destination: ./_site # optional
+          ruby-version: '3.x' # Or your preferred Ruby version
+          bundler-cache: true # runs bundle install and caches gems
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --destination _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
